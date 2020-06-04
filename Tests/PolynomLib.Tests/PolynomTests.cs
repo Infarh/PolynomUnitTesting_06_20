@@ -47,5 +47,31 @@ namespace PolynomLib.Tests
 
             Assert.AreEqual(expected_y, actual_y);
         }
+
+        [TestMethod]
+        public void Value2_Returns_correct_result()
+        {
+            // A-A-A
+            // Arrange - Act - Assert
+
+            #region Arrange
+
+            double[] a = { 7, 5, 3 };
+            var x = 5d;
+            var expected_y = 107d;
+
+            var polynom = new Polynom(a);
+
+            #endregion
+
+            #region Act
+
+            var actual_y = polynom.Value2(x);
+
+            #endregion
+
+            Assert.IsFalse(double.IsNaN(actual_y));
+            Assert.AreEqual(expected_y, actual_y);
+        }
     }
 }

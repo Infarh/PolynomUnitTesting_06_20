@@ -42,7 +42,7 @@ namespace PolynimLib
         {
             var y = 0d;
             for (var n = 0; n < _a.Length; n++)
-                y += x * Math.Pow(x, n);
+                y += _a[n] * Math.Pow(x, n);
 
             return y;
         }
