@@ -27,7 +27,8 @@ namespace PolynimLib
             // y = ((a * x + b) * x + c) * x + d
 
             var len = _a.Length;
-            if (len == 0) return double.NaN;
+            if (len == 0) 
+                return double.NaN;
             var y = _a[_a.Length - 1];
             for (var n = len - 2; n >= 0; n--)
                 y = y * x + _a[n];

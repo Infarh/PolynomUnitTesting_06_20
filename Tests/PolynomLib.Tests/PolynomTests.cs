@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PolynimLib;
+// ReSharper disable EmptyArray
 
 namespace PolynomLib.Tests
 {
@@ -10,7 +11,7 @@ namespace PolynomLib.Tests
     public class PolynomTests
     {
         [TestMethod]
-        public static void Value_Returns_correct_result()
+        public void Value_Returns_correct_result()
         {
             // A-A-A
             // Arrange - Act - Assert
@@ -32,6 +33,18 @@ namespace PolynomLib.Tests
             #endregion
 
             Assert.IsFalse(double.IsNaN(actual_y));
+            Assert.AreEqual(expected_y, actual_y);
+        }
+
+        [TestMethod]
+        public void Value_Returns_NaN_for_ZeroLength_polynom()
+        {
+            var p = new Polynom(new double[0]);
+            var x = 0;
+            var expected_y = double.NaN;
+
+            var actual_y = p.Value(x);
+
             Assert.AreEqual(expected_y, actual_y);
         }
     }
