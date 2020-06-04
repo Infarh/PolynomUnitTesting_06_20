@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolynomUnitTesting", "Polyn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolynimLib", "PolynimLib\PolynimLib.csproj", "{8493717A-7F1F-4EEC-AD6A-C90C6979B7DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{ABA4C44E-8422-4AA2-BE6F-4B7C04BFF4CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolynomLib.Tests", "Tests\PolynomLib.Tests\PolynomLib.Tests.csproj", "{D00EA4E4-607A-433B-8831-F9F5D412B069}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{8493717A-7F1F-4EEC-AD6A-C90C6979B7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8493717A-7F1F-4EEC-AD6A-C90C6979B7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8493717A-7F1F-4EEC-AD6A-C90C6979B7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D00EA4E4-607A-433B-8831-F9F5D412B069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00EA4E4-607A-433B-8831-F9F5D412B069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00EA4E4-607A-433B-8831-F9F5D412B069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00EA4E4-607A-433B-8831-F9F5D412B069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D00EA4E4-607A-433B-8831-F9F5D412B069} = {ABA4C44E-8422-4AA2-BE6F-4B7C04BFF4CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6E63C519-EAAC-4FEF-A26B-A37C4E0A15E7}
