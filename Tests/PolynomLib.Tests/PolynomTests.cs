@@ -81,7 +81,7 @@ namespace PolynomLib.Tests
 
             var diff_p = p.GetDifferential();
 
-
+            Assert.IsNotNull(diff_p);
         }
     }
 }
