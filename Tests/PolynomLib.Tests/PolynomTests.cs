@@ -80,6 +80,8 @@ namespace PolynomLib.Tests
             var p = new Polynom(7, 5, 3);
 
             var diff_p = p.GetDifferential();
+
+
         }
     }
 }

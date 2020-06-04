@@ -46,5 +46,10 @@ namespace PolynimLib
 
             return y;
         }
+
+        public Polynom GetDifferential()
+        {
+            return null;
+        }
     }
 }
