@@ -12,7 +12,7 @@ namespace PolynimLib
     {
         private readonly double[] _a;
 
-        public Polynom(double[] a)
+        public Polynom(params double[] a)
         {
             _a = a;
         }

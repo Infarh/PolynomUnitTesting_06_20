@@ -73,5 +73,13 @@ namespace PolynomLib.Tests
             Assert.IsFalse(double.IsNaN(actual_y));
             Assert.AreEqual(expected_y, actual_y);
         }
+
+        [TestMethod]
+        public void Differential_Returns_correct_Polynom()
+        {
+            var p = new Polynom(7, 5, 3);
+
+            var diff_p = p.GetDifferential();
+        }
     }
 }
