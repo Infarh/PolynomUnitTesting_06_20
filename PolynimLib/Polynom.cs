@@ -12,6 +12,8 @@ namespace PolynimLib
     {
         private readonly double[] _a;
 
+        public double this[int n] => _a[n];
+
         public Polynom(params double[] a)
         {
             _a = a;
@@ -49,7 +51,17 @@ namespace PolynimLib
 
         public Polynom GetDifferential()
         {
-            return new Polynom();
+            var length = _a.Length - 1;
+            if(length < 0)
+                //throw new ApplicationException("Попытка дифференцирования полинома с массивом коэффициентов нулевой длины");
+                throw new InvalidOperationException("Попытка дифференцирования полинома с массивом коэффициентов нулевой длины");
+
+            var a = new double[length];
+
+            for (var i = 0; i < length; i++)
+                a[i] = _a[i + 1] * (i + 1);
+
+            return new Polynom(a);
         }
     }
 }

@@ -89,5 +89,23 @@ namespace PolynomLib.Tests
             Assert.AreEqual(expected_a0, diff_p[0]);
             Assert.AreEqual(expected_a1, diff_p[1]);
         }
+
+        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        public void Differential_throw_InvalidOperationException_for_Polynom_with_zero_length()
+        {
+            var p = new Polynom();
+
+            var q = p.GetDifferential();
+        }
+
+        [TestMethod]
+        public void Differential_throw_InvalidOperationException_for_Polynom_with_zero_length2()
+        {
+            var p = new Polynom();
+            const string expected_message = "Попытка дифференцирования полинома с массивом коэффициентов нулевой длины";
+
+            var exception = Assert.ThrowsException<InvalidOperationException>(() => p.GetDifferential());
+            Assert.AreEqual(expected_message, exception.Message);
+        }
     }
 }
