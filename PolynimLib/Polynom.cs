@@ -49,7 +49,7 @@ namespace PolynimLib
 
         public Polynom GetDifferential()
         {
-            return null;
+            return new Polynom();
         }
     }
 }
