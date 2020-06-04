@@ -77,11 +77,17 @@ namespace PolynomLib.Tests
         [TestMethod]
         public void Differential_Returns_correct_Polynom()
         {
+            //y = 7 + 5x + 3x^2
             var p = new Polynom(7, 5, 3);
+            const double expected_a0 = 5;
+            const double expected_a1 = 3 * 2;
 
+            // diff_y = 5 + 6x
             var diff_p = p.GetDifferential();
 
             Assert.IsNotNull(diff_p);
+            Assert.AreEqual(expected_a0, diff_p[0]);
+            Assert.AreEqual(expected_a1, diff_p[1]);
         }
     }
 }
